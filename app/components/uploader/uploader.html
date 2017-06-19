@@ -2,14 +2,18 @@
 <div class="file-field input-field">
   <div class="btn green darken-4">
     <span>Upload</span>
-    <input type="file" name="file">
+    <input type="file" id="{{$ctrl.id}}_input" name="file" data-url="https://upload.wistia.com">
   </div>
   <div class="file-path-wrapper">
     <input class="file-path validate" type="text"  >
   </div>
 </div>
 
-<p class="status">Status:</p>
+<p ng-show="$ctrl.url == ''" class="status">Status: {{$ctrl.status}}</p>
 <div class="progress">
-    <div class="determinate"></div>
+    <div class="determinate" ng-style="{'width': $ctrl.progress + '%' }"></div>
 </div>
+
+ <div class="video-container">
+   <iframe ng-src="{{$ctrl.url}}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="360" ng-show="$ctrl.url != ''"></iframe>
+  </div>

@@ -19,19 +19,23 @@
 
     <navbar></navbar>
     <div class="container">
-      <uploader></uploader>
+      <uploader id="fileupload" wistiapass="c3a38fd22aea0124d31e2d3dbfcc74870740a6636fdd3128fae02afe85f7ebdf"></uploader>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery.ui.widget.js"></script>
+    <script src="scripts/jquery.iframe-transport.js"></script>
+    <script src="scripts/jquery.fileupload.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="components/navbar/navbar.js"></script>
-        <script src="components/uploader/uploader.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="components/navbar/navbar.js"></script>
+    <script src="components/uploader/uploader.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
